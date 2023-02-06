@@ -8,3 +8,4 @@ uvicorn==0.20.0
 pypika-tortoise==0.1.6
 tortoise==0.1.1
 tortoise-orm==0.19.1
+asyncpg==0.26.0
