@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from tortoise import Tortoise
 from tortoise.contrib.fastapi import register_tortoise
 
-from src.core.config import PG_DB_USERNAME, PG_DB_PASSWORD, PG_DB_HOST, PG_DB_PORT, PG_DB_NAME, SERVER_PORT
+from src.core.config import PG_DB_USERNAME, PG_DB_PASSWORD, PG_DB_HOST, PG_DB_PORT, PG_DB_NAME, SERVER_PORT, \
+    TORTOISE_CONFIG
 
 app = FastAPI(
     title="NutSafelyForWeal",
@@ -49,38 +50,7 @@ async def init_db():
     # )
     register_tortoise(
         app=app,
-        config={
-            "connections": {
-                "default": {
-                    "engine": "tortoise.backends.asyncpg",
-                    "credentials": {
-                        "database": PG_DB_NAME,
-                        "host": PG_DB_HOST,
-                        "password": PG_DB_PASSWORD,
-                        "port": PG_DB_PORT,
-                        "user": PG_DB_USERNAME,
-                    }
-                }
-            },
-            "apps": {
-                "album": {
-                    "models": ["src.apps.album.models"],
-                    "default_connection": "default",
-                },
-                "media": {
-                    "models": ["src.apps.media.models"],
-                    "default_connection": "default",
-                },
-                "tag": {
-                    "models": ["src.apps.tag.models"],
-                    "default_connection": "default",
-                },
-                "user": {
-                    "models": ["src.apps.user.models"],
-                    "default_connection": "default",
-                },
-            },
-        }
+        config=TORTOISE_CONFIG
     )
     # db_url=f"asyncpg://{PG_DB_USERNAME}:{PG_DB_PASSWORD}@{PG_DB_HOST}:{PG_DB_PORT}/{PG_DB_NAME}",
     # modules={
