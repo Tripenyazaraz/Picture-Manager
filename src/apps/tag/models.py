@@ -5,7 +5,7 @@ from tortoise.models import Model
 from tortoise import fields
 
 
-class TagTypeEnum(Enum):
+class TagTypeEnum(str, Enum):
     general = 'general'
     author = 'author'
     character = 'character'
