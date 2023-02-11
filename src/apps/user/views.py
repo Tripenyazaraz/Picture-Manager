@@ -1,7 +1,7 @@
-from src.apps.user.models import UserModel, User_Pydantic
+from src.apps.user.models import User, User_Pydantic
 from src.core.mixins import ModelViewSet
 
 
 class UserView(ModelViewSet):
-    model = UserModel
+    model = User
     pydantic_model = User_Pydantic

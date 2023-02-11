@@ -26,19 +26,19 @@ TORTOISE_CONFIG = {
     },
     "apps": {
         "album": {
-            "models": ["src.apps.album.models"],  # "aerich.models"
+            "models": ["src.apps.album.models", "aerich.models"],
             "default_connection": "default",
         },
         "media": {
-            "models": ["src.apps.media.models"],  # "aerich.models"
+            "models": ["src.apps.media.models", "aerich.models"],
             "default_connection": "default",
         },
         "tag": {
-            "models": ["src.apps.tag.models"],  # "aerich.models"
+            "models": ["src.apps.tag.models", "aerich.models"],
             "default_connection": "default",
         },
         "user": {
-            "models": ["src.apps.user.models"],  # "aerich.models"
+            "models": ["src.apps.user.models", "aerich.models"],
             "default_connection": "default",
         },
     },

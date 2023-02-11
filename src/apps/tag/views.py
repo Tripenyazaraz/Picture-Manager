@@ -1,7 +1,7 @@
-from src.apps.tag.models import TagModel, Tag_Pydantic
+from src.apps.tag.models import Tag, Tag_Pydantic
 from src.core.mixins import ModelViewSet
 
 
 class TagView(ModelViewSet):
-    model = TagModel
+    model = Tag
     pydantic_model = Tag_Pydantic
