@@ -1,5 +1,5 @@
 from src.apps.user.models import User, User_Pydantic
-from src.core.mixins import ModelViewSet
+from src.base.mixins import ModelViewSet
 
 
 class UserView(ModelViewSet):

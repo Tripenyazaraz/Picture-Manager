@@ -1,5 +1,5 @@
 from src.apps.tag.models import Tag, Tag_Pydantic
-from src.core.mixins import ModelViewSet
+from src.base.mixins import ModelViewSet
 
 
 class TagView(ModelViewSet):

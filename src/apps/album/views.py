@@ -1,5 +1,5 @@
 from src.apps.album.models import Album, Album_Pydantic
-from src.core.mixins import ModelViewSet
+from src.base.mixins import ModelViewSet
 
 
 class AlbumView(ModelViewSet):

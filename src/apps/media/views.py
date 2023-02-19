@@ -1,5 +1,5 @@
 from src.apps.media.models import Media_Pydantic, Media
-from src.core.mixins import ModelViewSet
+from src.base.mixins import ModelViewSet
 
 
 class MediaView(ModelViewSet):

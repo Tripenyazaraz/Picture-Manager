@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from src.apps.tag.views import TagView
-from src.core.routes import ViewSetRouter
+from src.base.routes import ViewSetRouter
 
 router = APIRouter()
 
